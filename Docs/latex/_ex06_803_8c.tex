@@ -1,0 +1,69 @@
+\hypertarget{_ex06_803_8c}{}\doxysection{Ex06.03/\+Ex06.03.c File Reference}
+\label{_ex06_803_8c}\index{Ex06.03/Ex06.03.c@{Ex06.03/Ex06.03.c}}
+{\ttfamily \#include \char`\"{}Ex06.\+03.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_ex06_803_8c_a86fd4404b140711fdb77326609c0f393}{BYTE\+\_\+\+SIZE}}~7
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_ex06_803_8c_a2fa2816a77559584ba808aab6cbf5608}{Print\+Bin}} (void $\ast$address, int size)
+\begin{DoxyCompactList}\small\item\em Prints the memory binary values of what is sent as a perameter. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_ex06_803_8c_a86fd4404b140711fdb77326609c0f393}\label{_ex06_803_8c_a86fd4404b140711fdb77326609c0f393}} 
+\index{Ex06.03.c@{Ex06.03.c}!BYTE\_SIZE@{BYTE\_SIZE}}
+\index{BYTE\_SIZE@{BYTE\_SIZE}!Ex06.03.c@{Ex06.03.c}}
+\doxysubsubsection{\texorpdfstring{BYTE\_SIZE}{BYTE\_SIZE}}
+{\footnotesize\ttfamily \#define BYTE\+\_\+\+SIZE~7}
+
+
+
+Definition at line 5 of file Ex06.\+03.\+c.
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_ex06_803_8c_a2fa2816a77559584ba808aab6cbf5608}\label{_ex06_803_8c_a2fa2816a77559584ba808aab6cbf5608}} 
+\index{Ex06.03.c@{Ex06.03.c}!PrintBin@{PrintBin}}
+\index{PrintBin@{PrintBin}!Ex06.03.c@{Ex06.03.c}}
+\doxysubsubsection{\texorpdfstring{PrintBin()}{PrintBin()}}
+{\footnotesize\ttfamily void Print\+Bin (\begin{DoxyParamCaption}\item[{void $\ast$}]{address,  }\item[{int}]{size }\end{DoxyParamCaption})}
+
+
+
+Prints the memory binary values of what is sent as a perameter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & -\/ the address of the variable to print \\
+\hline
+{\em size} & -\/ size of the variable in memory (number of bytes it takes up) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 7 of file Ex06.\+03.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{8 \{}
+\DoxyCodeLine{9     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} *ptr = address;}
+\DoxyCodeLine{10     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} index = 0; index < size; ++index)}
+\DoxyCodeLine{11     \{}
+\DoxyCodeLine{12         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = \mbox{\hyperlink{_ex06_803_8c_a86fd4404b140711fdb77326609c0f393}{BYTE\_SIZE}}; j >= 0; j-\/-\/) \{}
+\DoxyCodeLine{13             printf(\textcolor{stringliteral}{"{}\%d"{}}, (ptr[index] >> j) \& 1); \textcolor{comment}{//or each bit and shift by 1}}
+\DoxyCodeLine{14             \textcolor{keywordflow}{if} (j\%4==0)}
+\DoxyCodeLine{15             \{}
+\DoxyCodeLine{16                 printf\_s(\textcolor{stringliteral}{"{} "{}});}
+\DoxyCodeLine{17             \}}
+\DoxyCodeLine{18         \}}
+\DoxyCodeLine{19         printf\_s(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{20     \}}
+\DoxyCodeLine{21 \}}
+
+\end{DoxyCode}

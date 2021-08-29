@@ -1,0 +1,45 @@
+\hypertarget{_exercise06_2main_8c}{}\doxysection{Exercise06/main.c File Reference}
+\label{_exercise06_2main_8c}\index{Exercise06/main.c@{Exercise06/main.c}}
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}Linked\+List.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{_exercise06_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}{main}} (void)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_exercise06_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}\label{_exercise06_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}} 
+\index{main.c@{main.c}!main@{main}}
+\index{main@{main}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 5 of file main.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{6 \{}
+\DoxyCodeLine{7     \mbox{\hyperlink{struct_list__t}{List}} *list = \mbox{\hyperlink{_linked_list_8c_a9d00781ccc3a7caae02c5f88ede0aff3}{CreateList}}();}
+\DoxyCodeLine{8     list-\/>\mbox{\hyperlink{struct_list__t_a0531447ef210c9314e2994694008f858}{head}} = \mbox{\hyperlink{_linked_list_8c_ace07b2da35d01c832b69e6e32baa756f}{PushFront}}(list, 5);}
+\DoxyCodeLine{9     \mbox{\hyperlink{struct_node__t}{Node}} *nextNode = list-\/>\mbox{\hyperlink{struct_list__t_a0531447ef210c9314e2994694008f858}{head}};}
+\DoxyCodeLine{10     nextNode = \mbox{\hyperlink{_linked_list_8c_a887ac41c9354aa22ec3c04b9a0b38185}{Insert}}(nextNode, 6);}
+\DoxyCodeLine{11     nextNode = \mbox{\hyperlink{_linked_list_8c_a887ac41c9354aa22ec3c04b9a0b38185}{Insert}}(nextNode, 7);}
+\DoxyCodeLine{12     nextNode = \mbox{\hyperlink{_linked_list_8c_a887ac41c9354aa22ec3c04b9a0b38185}{Insert}}(nextNode, 8);}
+\DoxyCodeLine{13     nextNode = \mbox{\hyperlink{_linked_list_8c_ad2a5a005e80280421f81955fa9b4cde7}{Find}}(list, 6);}
+\DoxyCodeLine{14     nextNode = \mbox{\hyperlink{_linked_list_8c_a887ac41c9354aa22ec3c04b9a0b38185}{Insert}}(nextNode, 10);}
+\DoxyCodeLine{15     \textcolor{keywordtype}{int} data = \mbox{\hyperlink{_linked_list_8c_a3f995f7e2407887f82e77890626be407}{GetValue}}(nextNode);}
+\DoxyCodeLine{16     \mbox{\hyperlink{struct_node__t}{Node}} *deleteNode = \mbox{\hyperlink{_linked_list_8c_aead43b499848ca12aa23bc9aa03b2305}{DeleteValue}}(list, data);}
+\DoxyCodeLine{17     \mbox{\hyperlink{struct_node__t}{Node}} *deleteNodeptr = deleteNode-\/>\mbox{\hyperlink{struct_node__t_ae71a3ef49e7933ac88ee0ee40024ce73}{previous}};}
+\DoxyCodeLine{18     \mbox{\hyperlink{_linked_list_8c_add9cf480d7393175e0fc089098f3ce1a}{DeleteNode}}(list, deleteNodeptr);}
+\DoxyCodeLine{19     \mbox{\hyperlink{_linked_list_8c_ace07b2da35d01c832b69e6e32baa756f}{PushFront}}(list, 89);}
+\DoxyCodeLine{20     data = \mbox{\hyperlink{_linked_list_8c_a182bce0bd50a825fd73f3c381dfd12e2}{PopBack}}(list);}
+\DoxyCodeLine{21     data = \mbox{\hyperlink{_linked_list_8c_a1fb0e131e9e537bda1a3076d8baf1481}{PopFront}}(list);}
+\DoxyCodeLine{22     \mbox{\hyperlink{_linked_list_8c_a5f8ae2ef37042e2424dfb6b62daddd34}{FreeList}}(list);}
+\DoxyCodeLine{23     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{24 \}}
+
+\end{DoxyCode}

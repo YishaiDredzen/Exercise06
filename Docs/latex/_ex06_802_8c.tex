@@ -1,0 +1,44 @@
+\hypertarget{_ex06_802_8c}{}\doxysection{Ex06.02/\+Ex06.02.c File Reference}
+\label{_ex06_802_8c}\index{Ex06.02/Ex06.02.c@{Ex06.02/Ex06.02.c}}
+{\ttfamily \#include \char`\"{}Ex06.\+02.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_ex06_802_8c_abb2eae058bba1830cd295f81c7e0f7fb}{Print\+Hex}} (void $\ast$address, int size)
+\begin{DoxyCompactList}\small\item\em Prints the memory hexadecimal values of what is sent as a perameter. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_ex06_802_8c_abb2eae058bba1830cd295f81c7e0f7fb}\label{_ex06_802_8c_abb2eae058bba1830cd295f81c7e0f7fb}} 
+\index{Ex06.02.c@{Ex06.02.c}!PrintHex@{PrintHex}}
+\index{PrintHex@{PrintHex}!Ex06.02.c@{Ex06.02.c}}
+\doxysubsubsection{\texorpdfstring{PrintHex()}{PrintHex()}}
+{\footnotesize\ttfamily void Print\+Hex (\begin{DoxyParamCaption}\item[{void $\ast$}]{address,  }\item[{int}]{size }\end{DoxyParamCaption})}
+
+
+
+Prints the memory hexadecimal values of what is sent as a perameter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & -\/ the address of the variable to print \\
+\hline
+{\em size} & -\/ size of the variable in memory (number of bytes it takes up) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 5 of file Ex06.\+02.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{6 \{}
+\DoxyCodeLine{7     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} *ptr = address;}
+\DoxyCodeLine{8     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} index = 0; index < size; ++index)}
+\DoxyCodeLine{9     \{}
+\DoxyCodeLine{10         printf\_s(\textcolor{stringliteral}{"{}\%x\(\backslash\)n"{}}, ptr[index]);}
+\DoxyCodeLine{11     \}}
+\DoxyCodeLine{12 \}}
+
+\end{DoxyCode}
